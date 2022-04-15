@@ -1,6 +1,10 @@
 import { ListNode } from "../problems/delete-node-in-linked-list/delete-node-in-linked-list";
 
 export function toList(arr) {
+  if (!arr.length) {
+    return null;
+  }
+
   const [firstValue, ...rest] = arr;
   const head = new ListNode(firstValue);
 
